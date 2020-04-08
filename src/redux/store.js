@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-import promiseMiddleware from 'redux-promise-middleware'
+// import promiseMiddleware from 'redux-promise-middleware' import if need be
 // import reducers
 import newsReducer from './newsReducer'
 import { composeWithDevTools } from 'redux-devtools-extension'
@@ -10,5 +10,5 @@ const rootReducer = combineReducers({
 
 export default createStore (
   rootReducer,
-  composeWithDevTools(applyMiddleware(promiseMiddleware))
+  composeWithDevTools()
 )

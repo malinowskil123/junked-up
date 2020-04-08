@@ -1,0 +1,14 @@
+// colors
+$teal: #5BC6B2;
+$white: #FFFFFF;
+$space-gray: #2B3541;
+
+// fonts
+
+// mixins
+@mixin flex-box($dir: row, $just: space-evenly, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}

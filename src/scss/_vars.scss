@@ -1,11 +1,19 @@
 // colors
-$teal: #5BC6B2;
-$white: #FFFFFF;
-$space-gray: #2B3541;
+$teal: #5bc6b2;
+$copper: #c6705b;
+$white: #ffffff;
+$space-gray: #2b3541;
 
 // fonts
+$main-font: 'Do Hyeon', sans-serif;
+$header-font: 'Concert One', cursive;
 
 // mixins
+@mixin link-hover($color: $white) {
+  color: $color;
+  text-decoration: none;
+}
+
 @mixin flex-box($dir: row, $just: space-evenly, $align: center) {
   display: flex;
   flex-direction: $dir;

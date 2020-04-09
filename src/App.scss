@@ -1,0 +1,12 @@
+@import './scss/vars';
+
+body {
+  font-family: $main-font;
+}
+
+.App {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background: #d0cdcd;
+}

@@ -1,16 +1,16 @@
 import React from 'react'
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import routes from './routes'
 import Nav from './components/Nav/Nav'
-import './App.css'
-
+import './App.scss'
 
 function App(props) {
-
-  return <div className='App'>
-    <Nav/>
-    {routes}
-  </div>
+  return (
+    <div className='App'>
+      <Nav />
+      {routes}
+    </div>
+  )
 }
 
 export default withRouter(App)

@@ -1,0 +1,9 @@
+@import '../../scss/vars';
+
+.Article {
+  color: $space-gray;
+}
+
+.link:hover {
+  @include link-hover($teal);
+}

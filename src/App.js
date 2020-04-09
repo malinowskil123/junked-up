@@ -4,11 +4,11 @@ import routes from './routes'
 import Nav from './components/Nav/Nav'
 import './App.scss'
 
-function App(props) {
+function App() {
   return (
     <div className='App'>
       <Nav />
-      {routes}
+      <div className='container body-content'>{routes}</div>
     </div>
   )
 }

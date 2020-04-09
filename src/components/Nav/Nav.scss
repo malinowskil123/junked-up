@@ -9,7 +9,7 @@ nav {
 
 .nav-text {
   font-size: 1.7rem;
-  color: $white;
+  color: $teal;
   text-align: center;
   font-family: $header-font;
 }
@@ -36,6 +36,11 @@ nav {
 
 .icon-rotate {
   transform: rotate(90deg);
+}
+
+.logo-icon {
+  width: 10%;
+  display: inline;
 }
 
 .mobile-menu {
@@ -91,7 +96,7 @@ nav {
     #desktop-menu {
       width: 45vw;
     }
-    #desktop-menu li a {
+    #nav-item {
       font-size: 0.9rem;
     }
   }
@@ -122,12 +127,15 @@ nav {
     margin-right: 5vw;
     @include flex-box(row, space-evenly, center);
   }
-  .desktop-menu li a {
-    color: $white;
+  .nav-item {
+    color: $teal;
     text-transform: uppercase;
     font-size: 1.2rem;
   }
-  .desktop-menu li a:hover {
-    @include link-hover($teal);
+  .nav-item:hover {
+    @include link-hover($white);
+  }
+  .logo-icon {
+    width: 5%;
   }
 }

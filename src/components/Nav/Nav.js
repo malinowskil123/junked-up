@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import icon from '../../assets/icon.svg'
 import graph from '../../assets/graph.png'
 import Col from 'react-bootstrap/Col'
@@ -37,12 +38,7 @@ export default function Nav() {
       <Row className='align-items-center' style={{ height: '10vh' }}>
         <Col xs={8} md={6}>
           <h1 className='nav-text'>
-            JunkedUp{' '}
-            <img
-              src={graph}
-              alt='logo icon'
-              style={{ width: '10%', display: 'inline' }}
-            />
+            JunkedUp <img src={graph} alt='logo icon' className='logo-icon' />
           </h1>
         </Col>
         <Col xs={2} md={6}>
@@ -61,26 +57,26 @@ export default function Nav() {
             className='mobile-menu mobile-menu-hide hide-menu-collapse'
             onClick={showHideMobileMenu}
           >
-            <a href='#home'>
+            <Link to='/' className='nav-item'>
               <li>home</li>
-            </a>
-            <a href='#about'>
+            </Link>
+            <Link to='/about' className='nav-item'>
               <li>about</li>
-            </a>
-            <a href='#skills'>
-              <li>stock</li>
-            </a>
+            </Link>
+            <Link to='/' className='nav-item'>
+              <li>search</li>
+            </Link>
           </ul>
           <ul id='desktop-menu' className='desktop-menu'>
-            <a href='#home'>
+            <Link to='/' className='nav-item'>
               <li>home</li>
-            </a>
-            <a href='#about'>
+            </Link>
+            <Link to='/about' className='nav-item'>
               <li>about</li>
-            </a>
-            <a href='#skills'>
-              <li>stock</li>
-            </a>
+            </Link>
+            <Link to='/search' className='nav-item'>
+              <li>search</li>
+            </Link>
           </ul>
         </Col>
       </Row>

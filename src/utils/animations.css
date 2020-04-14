@@ -1,0 +1,17 @@
+/* animations */
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@keyframes slideDown {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 20vh;
+  }
+}

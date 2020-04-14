@@ -1,11 +1,10 @@
 @import './scss/vars';
 
-.App {
+body {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: #d0cdcd;
-  padding-bottom: 10vh;
+  color: $space-gray;
 }
 
 // links

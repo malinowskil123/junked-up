@@ -38,44 +38,51 @@ export default function Nav() {
       <Row className='align-items-center' style={{ height: '10vh' }}>
         <Col xs={8} md={6}>
           <h1 className='nav-text'>
-            JunkedUp <img src={graph} alt='logo icon' className='logo-icon' />
+            JunkedUp
+            {/* <img src={graph} alt='logo icon' className='logo-icon' /> */}
           </h1>
         </Col>
         <Col xs={2} md={6}>
-          <button className='nav-button' onClick={showHideMobileMenu}>
-            menu
-            <img
-              id='nav-icon'
-              rel='img'
-              src={icon}
-              alt='icon'
-              className='icon'
-            />
-          </button>
+          <img
+            id='nav-icon'
+            rel='img'
+            src={icon}
+            alt='icon'
+            className='icon nav-button'
+            onClick={showHideMobileMenu}
+          />
           <ul
             id='mobile-menu'
             className='mobile-menu mobile-menu-hide hide-menu-collapse'
             onClick={showHideMobileMenu}
           >
             <Link to='/' className='nav-item'>
-              <li>home</li>
+              <li>
+                <strong>home</strong>
+              </li>
             </Link>
             <Link to='/about' className='nav-item'>
-              <li>about</li>
+              <strong>about</strong>
             </Link>
             <Link to='/' className='nav-item'>
-              <li>search</li>
+              <strong>search</strong>
             </Link>
           </ul>
-          <ul id='desktop-menu' className='desktop-menu'>
+          <ul id='desktop-menu' className='desktop-menu mt-3'>
             <Link to='/' className='nav-item'>
-              <li>home</li>
+              <li>
+                <strong>home</strong>
+              </li>
             </Link>
             <Link to='/about' className='nav-item'>
-              <li>about</li>
+              <li>
+                <strong>about</strong>
+              </li>
             </Link>
             <Link to='/search' className='nav-item'>
-              <li>search</li>
+              <li>
+                <strong>search</strong>
+              </li>
             </Link>
           </ul>
         </Col>

@@ -14,23 +14,7 @@ nav {
   font-family: $header-font;
 }
 
-.nav-button {
-  width: 90px;
-  height: 40px;
-  margin-right: 3vw;
-  background-color: #000000;
-  border: 1px solid $white;
-  color: $white;
-  font-size: 1rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 5px;
-  text-transform: uppercase;
-}
-
 .icon {
-  width: 28%;
   transition: 0.5s;
 }
 
@@ -52,9 +36,6 @@ nav {
   transition: 0.5s;
   overflow: hidden;
   text-align: center;
-}
-
-#mobile-menu {
   @include flex-box(column, space-evenly, center);
 }
 
@@ -62,21 +43,20 @@ nav {
   visibility: hidden;
 }
 
-#mobile-menu li {
+.mobile-menu li {
   width: 100%;
   height: auto;
-  border: 2px solid $space-gray;
 }
 
-#mobile-menu a {
+.mobile-menu a {
   width: 100vw;
   color: $white;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
-#mobile-menu a:hover {
-  @include link-hover($white);
+.mobile-menu a:hover {
+  @include link-hover($space-gray);
 }
 
 .mobile-menu-hide {
@@ -84,7 +64,7 @@ nav {
 }
 
 .moblie-menu-show {
-  height: 24vh;
+  height: 100vh;
 }
 
 .desktop-menu {
@@ -107,9 +87,9 @@ nav {
 
   .nav-scroll {
     height: 10vh;
-    background-color: #000000;
+    background-color: #d3d3d3;
     transition: 0.5s;
-    border: 1px solid #000000;
+    border: 1px solid #d3d3d3;
   }
   .nav-static {
     background-color: transparent;
@@ -133,7 +113,7 @@ nav {
     font-size: 1.2rem;
   }
   .nav-item:hover {
-    @include link-hover($white);
+    @include link-hover($space-gray);
   }
   .logo-icon {
     width: 5%;

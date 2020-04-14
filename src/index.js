@@ -7,6 +7,7 @@ import store from './redux/store'
 import * as serviceWorker from './serviceWorker'
 import './index.css'
 import './reset.css'
+import './utils/animations.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Article from '../Article/Article'
-import HomeStatusBar from '../HomeStatusBar/HomeStatusBar'
+import Graph from '../Graph/Graph'
 import { connect } from 'react-redux'
 import { getHomeArticles } from '../../redux/newsReducer'
 import { getStockInfo } from '../../redux/stockReducer'
@@ -11,11 +11,11 @@ function Home(props) {
   const { homeArticlesArr, getHomeArticles, getStockInfo, stockObj } = props
   useEffect(() => {
     if (homeArticlesArr.length < 1) getHomeArticles()
-    if(!stockObj['Meta Data']) getStockInfo('AMZN')
+    if (!stockObj['Meta Data']) getStockInfo('AMZN')
     slideDown('home-content')
     fadeIn('home-content')
   }, [])
-    console.log(stockObj)
+  console.log(stockObj)
   const articleElmArr = homeArticlesArr.map((elm, index) => {
     return (
       <Article
@@ -30,8 +30,9 @@ function Home(props) {
   })
   return (
     <section id='home-content'>
-      <HomeStatusBar stockObj={stockObj}/>
-      <h1 className='home-header'>Stay up to date...</h1>
+      <h1 className='text-center'>Market Indices</h1>
+      <Graph stockObj={stockObj} />
+      <h1 className='text-center'>Stay up to date...</h1>
       <hr className='mb-5' />
       {articleElmArr}
     </section>
@@ -40,14 +41,13 @@ function Home(props) {
 
 const mapStateToProps = (reduxState) => {
   const { homeArticlesArr } = reduxState.newsReducer,
-    {stockObj} = reduxState.stockReducer
+    { stockObj } = reduxState.stockReducer
   return { homeArticlesArr, stockObj }
 }
 
 const mapDispatchToProps = {
   getHomeArticles,
-  getStockInfo
+  getStockInfo,
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -30,8 +30,8 @@ export default function newsReducer(state = initialState, action) {
   switch (type) {
     case actionList.GET_HOME_ARTICLES + '_FULFILLED':
       return { ...state, homeArticlesArr: payload.data.articles }
-    case actionList.GET_KEYWORD_ARTICLES:
-      return { ...state, keywordArticlesArr: payload.articles }
+    // case actionList.GET_KEYWORD_ARTICLES:
+    //   return { ...state, keywordArticlesArr: payload.articles }
     default:
       return state
   }

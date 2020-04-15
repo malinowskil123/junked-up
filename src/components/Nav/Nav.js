@@ -58,6 +58,9 @@ export default function Nav() {
               </li>
             </Link>
             <Link to='/about' className='nav-item'>
+              <strong>dashboard</strong>
+            </Link>
+            <Link to='/about' className='nav-item'>
               <strong>about</strong>
             </Link>
             <Link to='/' className='nav-item'>
@@ -68,6 +71,11 @@ export default function Nav() {
             <Link to='/' className='nav-item'>
               <li>
                 <strong>home</strong>
+              </li>
+            </Link>
+            <Link to='/about' className='nav-item'>
+              <li>
+                <strong>dashboard</strong>
               </li>
             </Link>
             <Link to='/about' className='nav-item'>

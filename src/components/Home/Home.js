@@ -1,18 +1,21 @@
 import React, { useEffect } from 'react'
 import Article from '../Article/Article'
+import HomeStatusBar from '../HomeStatusBar/HomeStatusBar'
 import { connect } from 'react-redux'
 import { getHomeArticles } from '../../redux/newsReducer'
+import { getStockInfo } from '../../redux/stockReducer'
 import './Home.scss'
 import { slideDown, fadeIn } from '../../utils/animations'
 
 function Home(props) {
-  const { homeArticlesArr, getHomeArticles } = props
+  const { homeArticlesArr, getHomeArticles, getStockInfo, stockObj } = props
   useEffect(() => {
     if (homeArticlesArr.length < 1) getHomeArticles()
+    if(!stockObj['Meta Data']) getStockInfo('AMZN')
     slideDown('home-content')
     fadeIn('home-content')
-  }, [homeArticlesArr])
-
+  }, [])
+    console.log(stockObj)
   const articleElmArr = homeArticlesArr.map((elm, index) => {
     return (
       <Article
@@ -27,6 +30,7 @@ function Home(props) {
   })
   return (
     <section id='home-content'>
+      <HomeStatusBar stockObj={stockObj}/>
       <h1 className='home-header'>Stay up to date...</h1>
       <hr className='mb-5' />
       {articleElmArr}
@@ -35,8 +39,15 @@ function Home(props) {
 }
 
 const mapStateToProps = (reduxState) => {
-  const { homeArticlesArr } = reduxState.newsReducer
-  return { homeArticlesArr }
+  const { homeArticlesArr } = reduxState.newsReducer,
+    {stockObj} = reduxState.stockReducer
+  return { homeArticlesArr, stockObj }
 }
 
-export default connect(mapStateToProps, { getHomeArticles })(Home)
+const mapDispatchToProps = {
+  getHomeArticles,
+  getStockInfo
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

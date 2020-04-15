@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import icon from '../../assets/icon.svg'
-import graph from '../../assets/graph.png'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import './Nav.scss'
@@ -37,10 +36,7 @@ export default function Nav() {
     <nav id='nav-bar' className='nav-static'>
       <Row className='align-items-center' style={{ height: '10vh' }}>
         <Col xs={8} md={6}>
-          <h1 className='nav-text'>
-            JunkedUp
-            {/* <img src={graph} alt='logo icon' className='logo-icon' /> */}
-          </h1>
+          <h1 className='nav-text'>JunkedUp</h1>
         </Col>
         <Col xs={2} md={6}>
           <img

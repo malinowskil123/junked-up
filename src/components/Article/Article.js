@@ -16,7 +16,12 @@ export default function Article(props) {
           <h4 style={{ textAlign: 'right' }}>{convertDate(props.date)}</h4>
         </Col>
       </Row>
-      <a href={props.url} className='link' target='_blank'>
+      <a
+        href={props.url}
+        className='link'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <Row>
           <Col md='4'>
             <Image src={props.img} fluid className='mb-2 mb-md-0' />

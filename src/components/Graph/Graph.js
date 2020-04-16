@@ -48,8 +48,7 @@ export default function HomeStatusBar(props) {
     paragraphElm.classList.add('selected-date')
   }
   useEffect(() => {
-    if (graphValues.x.length === 0 && stockObj['Time Series (Daily)'])
-      setValue()
+    if (stockObj['Time Series (Daily)']) setValue()
   }, [stockObj])
   return (
     <div>

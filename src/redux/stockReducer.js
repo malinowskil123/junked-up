@@ -2,7 +2,7 @@ import axios from 'axios'
 import actionList from './actionList'
 
 const initialState = {
-  stockObj: {},
+    stockObj: {},
   },
   API_KEY = 'H7KPPO7TY4NXIRAH'
 
@@ -16,11 +16,20 @@ export function getStockInfo(companySymbol) {
   return action
 }
 
+export function clearStockReducer() {
+  let action = {
+    type: actionList.CLEAR_STOCK_REDUCER,
+  }
+  return action
+}
+
 export default function stockReducer(state = initialState, action) {
   const { payload, type } = action
   switch (type) {
     case actionList.GET_STOCK_INFO + '_FULFILLED':
       return { ...state, stockObj: payload.data }
+    case actionList.CLEAR_STOCK_REDUCER:
+      return { ...state, stockObj: {} }
     default:
       return state
   }

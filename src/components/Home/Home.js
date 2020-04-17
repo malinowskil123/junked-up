@@ -5,10 +5,11 @@ import { connect } from 'react-redux'
 import { getHomeArticles } from '../../redux/newsReducer'
 import { getStockInfo, clearStockReducer } from '../../redux/stockReducer'
 import './Home.scss'
-import { slideDown, fadeIn } from '../../utils/animations'
+import { slideDown, fadeIn } from '../../utils/animations/animations'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { ToastContainer, toast } from 'react-toastify'
 
 function Home(props) {
   const {
@@ -29,6 +30,12 @@ function Home(props) {
     slideDown('home-content')
     fadeIn('home-content')
   })
+  const disableButton = () => {
+    console.log('hit')
+    const marketIndexButton = document.getElementById('market-index-btn')
+    marketIndexButton.disabled = true
+    setTimeout(() => (marketIndexButton.disabled = false), 30000)
+  }
   const articleElmArr = homeArticlesArr.map((elm, index) => {
     return (
       <Article
@@ -48,6 +55,7 @@ function Home(props) {
       <Row className='text-center  mt-2'>
         <Col>
           <Button
+            id='market-index-btn'
             className='button'
             size='lg'
             variant='outline-dark'
@@ -57,6 +65,7 @@ function Home(props) {
                 ? setIndex(0)
                 : setIndex(index + 1)
               clearStockReducer()
+              disableButton()
             }}
           >
             <strong>{marketIndicies[index + 1] || marketIndicies[0]}</strong>
@@ -66,6 +75,7 @@ function Home(props) {
       <h1 className='text-center mt-4'>Stay up to date...</h1>
       <hr className='mb-5' />
       {articleElmArr}
+      <ToastContainer autoClose={30000} />
     </section>
   )
 }

@@ -5,9 +5,12 @@ import { HashRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import * as serviceWorker from './serviceWorker'
+// custom stylesheets
 import './index.css'
 import './reset.css'
-import './utils/animations.css'
+import './utils/animations/animations'
+// framework stylesheets
+import 'react-toastify/dist/ReactToastify.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Plot from 'react-plotly.js'
-import dateSubtract from '../../utils/dateSubtract'
+import dateSubtract from '../../utils/dates/dateSubtract'
 import './Graph.scss'
 
 export default function HomeStatusBar(props) {

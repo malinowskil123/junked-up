@@ -2,7 +2,7 @@ import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Image from 'react-bootstrap/Image'
-import convertDate from '../../utils/convertDate'
+import convertDate from '../../utils/dates/convertDate'
 import './Article.scss'
 
 export default function Article(props) {

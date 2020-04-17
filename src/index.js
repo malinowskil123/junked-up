@@ -8,7 +8,8 @@ import * as serviceWorker from './serviceWorker'
 // custom stylesheets
 import './index.css'
 import './reset.css'
-import './utils/animations/animations'
+import './utils/animations/animations.css'
+import './utils/custom-toast/toast.scss'
 // framework stylesheets
 import 'react-toastify/dist/ReactToastify.css'
 import 'bootstrap/dist/css/bootstrap.min.css'

@@ -9,7 +9,7 @@ import { slideDown, fadeIn } from '../../utils/animations/animations'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 
 function Home(props) {
   const {
@@ -30,11 +30,25 @@ function Home(props) {
     slideDown('home-content')
     fadeIn('home-content')
   })
-  const disableButton = () => {
-    console.log('hit')
+  const disableButton = (timeout) => {
     const marketIndexButton = document.getElementById('market-index-btn')
     marketIndexButton.disabled = true
-    setTimeout(() => (marketIndexButton.disabled = false), 30000)
+    toast(
+      'This button is disabled for 10 seconds to limit the number of api calls!',
+      {
+        position: toast.POSITION.BOTTOM_RIGHT,
+        autoClose: timeout,
+        closeOnClick: false,
+        closeButton: false,
+        pauseOnHover: false,
+        draggable: false,
+        className: 'custom-toast',
+        progressClassName: 'custom-toast-progress'
+      }
+    )
+    setTimeout(() => {
+      marketIndexButton.disabled = false
+    }, timeout)
   }
   const articleElmArr = homeArticlesArr.map((elm, index) => {
     return (
@@ -65,17 +79,16 @@ function Home(props) {
                 ? setIndex(0)
                 : setIndex(index + 1)
               clearStockReducer()
-              disableButton()
+              disableButton(10000)
             }}
           >
             <strong>{marketIndicies[index + 1] || marketIndicies[0]}</strong>
           </Button>
         </Col>
       </Row>
-      <h1 className='text-center mt-4'>Stay up to date...</h1>
-      <hr className='mb-5' />
+      <hr className='mt-4 mb-2'/>
+      <h1 className='text-center mt-4 mb-5'>Stay up to date...</h1>
       {articleElmArr}
-      <ToastContainer autoClose={30000} />
     </section>
   )
 }

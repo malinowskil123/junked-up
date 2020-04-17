@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Plot from 'react-plotly.js'
 import dateSubtract from '../../utils/dates/dateSubtract'
+import { getCompanyName } from '../../utils/filter/filterStockInfo'
 import './Graph.scss'
 
 export default function HomeStatusBar(props) {
@@ -22,7 +23,7 @@ export default function HomeStatusBar(props) {
       yVal.push(stockObj['Time Series (Daily)'][key]['1. open'])
     }
     setGraphValues({
-      symbol: stockObj['Meta Data']['2. Symbol'],
+      symbol: getCompanyName(stockObj['Meta Data']['2. Symbol']),
       x: xVal,
       y: yVal,
     })

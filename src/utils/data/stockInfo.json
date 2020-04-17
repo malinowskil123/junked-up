@@ -3520,5 +3520,8 @@
   { "Company Name": "Zynga Inc.", "Symbol": "ZNGA" },
   { "Company Name": "ZS Pharma, Inc.", "Symbol": "ZSPH" },
   { "Company Name": "zulily, inc.", "Symbol": "ZU" },
-  { "Company Name": "Zumiez Inc.", "Symbol": "ZUMZ" }
+  { "Company Name": "Zumiez Inc.", "Symbol": "ZUMZ" },
+  { "Company Name": "Dow Jones Industrial Average", "Symbol": "DJIA" },
+  { "Company Name": "NYSE Composite", "Symbol": "NYA" },
+  { "Company Name": "S&P 500 Index", "Symbol": "SPX" }
 ]

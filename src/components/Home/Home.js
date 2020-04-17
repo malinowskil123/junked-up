@@ -23,10 +23,7 @@ function Home(props) {
   let [index, setIndex] = useState(0)
   useEffect(() => {
     if (homeArticlesArr.length < 1) getHomeArticles()
-    if (!stockObj['Meta Data']) {
-      console.log('hit')
-      getStockInfo(marketIndicies[index])
-    }
+    if (!stockObj['Meta Data']) getStockInfo(marketIndicies[index])
     slideDown('home-content')
     fadeIn('home-content')
   })
@@ -43,7 +40,7 @@ function Home(props) {
         pauseOnHover: false,
         draggable: false,
         className: 'custom-toast',
-        progressClassName: 'custom-toast-progress'
+        progressClassName: 'custom-toast-progress',
       }
     )
     setTimeout(() => {
@@ -86,7 +83,7 @@ function Home(props) {
           </Button>
         </Col>
       </Row>
-      <hr className='mt-4 mb-2'/>
+      <hr className='mt-4 mb-2' />
       <h1 className='text-center mt-4 mb-5'>Stay up to date...</h1>
       {articleElmArr}
     </section>

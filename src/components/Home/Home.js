@@ -6,10 +6,9 @@ import { getHomeArticles } from '../../redux/newsReducer'
 import { getStockInfo, clearStockReducer } from '../../redux/stockReducer'
 import './Home.scss'
 import { slideDown, fadeIn } from '../../utils/animations/animations'
-import Button from 'react-bootstrap/Button'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Button, Row, Col, Container } from 'react-bootstrap'
 import { toast } from 'react-toastify'
+import toastSettingObj from '../../utils/custom-toast/toastSettingObj'
 
 function Home(props) {
   const {
@@ -32,16 +31,7 @@ function Home(props) {
     marketIndexButton.disabled = true
     toast(
       'This button is disabled for 10 seconds to limit the number of api calls!',
-      {
-        position: toast.POSITION.BOTTOM_RIGHT,
-        autoClose: timeout,
-        closeOnClick: false,
-        closeButton: false,
-        pauseOnHover: false,
-        draggable: false,
-        className: 'custom-toast',
-        progressClassName: 'custom-toast-progress',
-      }
+      { ...toastSettingObj, autoClose: timeout }
     )
     setTimeout(() => {
       marketIndexButton.disabled = false
@@ -60,17 +50,16 @@ function Home(props) {
     )
   })
   return (
-    <section id='home-content'>
+    <Container id='home-content' className='animation-container'>
       <h1 className='text-center'>Market Indices</h1>
       <Graph stockObj={stockObj} />
       <Row className='text-center  mt-2'>
         <Col>
           <Button
             id='market-index-btn'
-            className='button'
+            className='buttons'
             size='lg'
             variant='outline-dark'
-            style={{ background: '#5bc6b2' }}
             onClick={() => {
               index >= marketIndicies.length - 1
                 ? setIndex(0)
@@ -86,7 +75,7 @@ function Home(props) {
       <hr className='mt-4 mb-2' />
       <h1 className='text-center mt-4 mb-5'>Stay up to date...</h1>
       {articleElmArr}
-    </section>
+    </Container>
   )
 }
 

@@ -52,30 +52,9 @@ export default function Nav() {
             className='mobile-menu mobile-menu-hide hide-menu-collapse'
             onClick={showHideMobileMenu}
           >
-            <Link to='/' className='nav-item'>
+           <Link to='/' className='nav-item'>
               <li>
                 <strong>home</strong>
-              </li>
-            </Link>
-            <Link to='/about' className='nav-item'>
-              <strong>dashboard</strong>
-            </Link>
-            <Link to='/about' className='nav-item'>
-              <strong>about</strong>
-            </Link>
-            <Link to='/' className='nav-item'>
-              <strong>search</strong>
-            </Link>
-          </ul>
-          <ul id='desktop-menu' className='desktop-menu mt-3'>
-            <Link to='/' className='nav-item'>
-              <li>
-                <strong>home</strong>
-              </li>
-            </Link>
-            <Link to='/about' className='nav-item'>
-              <li>
-                <strong>dashboard</strong>
               </li>
             </Link>
             <Link to='/about' className='nav-item'>
@@ -86,6 +65,43 @@ export default function Nav() {
             <Link to='/search' className='nav-item'>
               <li>
                 <strong>search</strong>
+              </li>
+            </Link>
+            <Link to='/dash' className='nav-item'>
+              <li>
+                <strong>dash</strong>
+              </li>
+            </Link>
+            <Link to='/auth' className='nav-item'>
+              <li>
+                <strong>login</strong>
+              </li>
+            </Link>
+          </ul>
+          <ul id='desktop-menu' className='desktop-menu mt-3'>
+            <Link to='/' className='nav-item'>
+              <li>
+                <strong>home</strong>
+              </li>
+            </Link>
+            <Link to='/about' className='nav-item'>
+              <li>
+                <strong>about</strong>
+              </li>
+            </Link>
+            <Link to='/search' className='nav-item'>
+              <li>
+                <strong>search</strong>
+              </li>
+            </Link>
+            <Link to='/dash' className='nav-item'>
+              <li>
+                <strong>dash</strong>
+              </li>
+            </Link>
+            <Link to='/auth' className='nav-item'>
+              <li>
+                <strong>login</strong>
               </li>
             </Link>
           </ul>

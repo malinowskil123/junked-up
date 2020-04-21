@@ -24,14 +24,31 @@ body {
   margin-right: auto;
 }
 
+.animation-container {
+  opacity: 0;
+  transition: 0.5s;
+}
+
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
+}
+
+.buttons {
+  background: $teal !important;
+  text-transform: uppercase;
+  width: 20vw;
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    width: inherit;
+  }
 }

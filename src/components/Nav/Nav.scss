@@ -23,11 +23,6 @@ nav {
   transform: rotate(90deg);
 }
 
-.logo-icon {
-  width: 10%;
-  display: inline;
-}
-
 .mobile-menu {
   width: 100%;
   position: fixed;
@@ -74,15 +69,17 @@ nav {
   display: none;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   @media (max-width: 1000px) {
     #desktop-menu {
       width: 45vw;
     }
+
     #nav-item {
       font-size: 0.9rem;
     }
   }
+
   .nav-static {
     height: 10vh;
     transition: 0.5s;
@@ -94,31 +91,38 @@ nav {
     transition: 0.5s;
     border: 1px solid $teal;
   }
+
   .nav-static {
     background-color: transparent;
     height: 10vh;
   }
+
   .nav-button,
   .mobile-menu {
     display: none;
   }
+
   .nav-text {
     font-size: 2.2rem;
   }
+
   .desktop-menu {
     width: 40vw;
     margin-right: 5vw;
     @include flex-box(row, space-evenly, center);
   }
+
   .nav-item {
     color: $white;
     -webkit-text-stroke: 1px $space-gray;
     text-transform: uppercase;
     font-size: 1.2rem;
   }
+
   .nav-item:hover {
     @include link-hover($space-gray);
   }
+
   .logo-icon {
     width: 5%;
   }

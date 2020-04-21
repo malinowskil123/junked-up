@@ -11,7 +11,7 @@ export function getHomeArticles() {
   let action = {
     type: actionList.GET_HOME_ARTICLES,
     payload: axios.get(
-      `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`
+      `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`
     ),
   }
   return action

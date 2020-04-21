@@ -1,15 +1,20 @@
 @import '../../scss/vars';
 
 .hammer-img {
-  width: 20vw;
   animation-name: hammer-hit;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
-.traffic-cone {
-  width: 10vw;
+#under-construction h1 {
+  font-size: 3em;
+}
+
+@media (min-width: 1024px) {
+  .traffic-cone {
+    width: 10vw;
+  }
 }
 
 @keyframes hammer-hit {

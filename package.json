@@ -8,10 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-<<<<<<< HEAD
-=======
     "dotenv": "^8.2.0",
->>>>>>> b907c7442e0c5a2329f60f30c7a98e9d0a98c2d8
     "express": "^4.17.1",
     "install": "^0.13.0",
     "moment": "^2.24.0",
@@ -32,8 +29,7 @@
     "scss": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "startheroku": "node server/index.js && react-scripts start",
+    "start": "node server/index.js && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -53,5 +49,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:4420"
 }

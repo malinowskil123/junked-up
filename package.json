@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "install": "^0.13.0",
     "moment": "^2.24.0",
     "npm": "^6.14.4",
@@ -28,9 +30,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "startheroku": "node server/index.js && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

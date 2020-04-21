@@ -1,0 +1,129 @@
+@import '../../scss//vars';
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: $teal;
+  z-index: 1;
+}
+
+.nav-text {
+  font-size: 1.7rem;
+  color: $white;
+  -webkit-text-stroke: 1px $space-gray;
+  text-align: center;
+  font-family: $header-font;
+}
+
+.icon {
+  transition: 0.5s;
+}
+
+.icon-rotate {
+  transform: rotate(90deg);
+}
+
+.mobile-menu {
+  width: 100%;
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  background: $teal;
+  transition: 0.5s;
+  overflow: hidden;
+  text-align: center;
+  @include flex-box(column, space-evenly, center);
+}
+
+.hide-menu-collapse {
+  visibility: hidden;
+}
+
+.mobile-menu li {
+  width: 100%;
+  height: auto;
+}
+
+.mobile-menu a {
+  width: 100vw;
+  color: $white;
+  text-transform: uppercase;
+  color: $white;
+  -webkit-text-stroke: 1px $space-gray;
+  font-size: 1.8rem;
+}
+
+.mobile-menu a:hover {
+  @include link-hover($space-gray);
+}
+
+.mobile-menu-hide {
+  height: 0;
+}
+
+.moblie-menu-show {
+  height: 100vh;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  @media (max-width: 1000px) {
+    #desktop-menu {
+      width: 45vw;
+    }
+
+    #nav-item {
+      font-size: 0.9rem;
+    }
+  }
+
+  .nav-static {
+    height: 10vh;
+    transition: 0.5s;
+  }
+
+  .nav-scroll {
+    height: 10vh;
+    background-color: $teal;
+    transition: 0.5s;
+    border: 1px solid $teal;
+  }
+
+  .nav-static {
+    background-color: transparent;
+    height: 10vh;
+  }
+
+  .nav-button,
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav-text {
+    font-size: 2.2rem;
+  }
+
+  .desktop-menu {
+    width: 40vw;
+    margin-right: 5vw;
+    @include flex-box(row, space-evenly, center);
+  }
+
+  .nav-item {
+    color: $white;
+    -webkit-text-stroke: 1px $space-gray;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  .nav-item:hover {
+    @include link-hover($space-gray);
+  }
+
+  .logo-icon {
+    width: 5%;
+  }
+}

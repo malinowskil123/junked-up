@@ -1,0 +1,9 @@
+@import '../../scss/vars';
+.custom-toast {
+  color: $white !important;
+  background: $teal !important;
+  font-weight: bolder;
+}
+.custom-toast-progress{
+  background: $white !important;
+}

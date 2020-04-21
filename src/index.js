@@ -1,20 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App'
-import {HashRouter as Router} from 'react-router-dom'
-import {Provider} from 'react-redux'
+import { HashRouter as Router } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import store from './redux/store'
 import * as serviceWorker from './serviceWorker'
+// custom stylesheets
+import './index.css'
+import './reset.css'
+import './utils/animations/animations.css'
+import './utils/custom-toast/toast.scss'
+// framework stylesheets
+import 'react-toastify/dist/ReactToastify.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(
   <Provider store={store}>
     <Router>
       <App />
     </Router>
-  </Provider>
-    
+  </Provider>,
   document.getElementById('root')
 )
 

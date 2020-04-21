@@ -1,0 +1,9 @@
+@import '../../scss/_vars';
+
+.selected-date {
+  color: $teal;
+}
+
+p:hover {
+  @include link-hover($teal);
+}

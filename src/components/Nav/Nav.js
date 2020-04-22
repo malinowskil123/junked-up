@@ -31,14 +31,14 @@ export default function Nav() {
   }
   useEffect(() => {
     navScrollAnimation()
-  }, [])
+  })
   return (
     <nav id='nav-bar' className='nav-static'>
       <Row className='align-items-center' style={{ height: '10vh' }}>
-        <Col xs={8} md={6}>
-          <h1 className='nav-text'>JunkedUp</h1>
+        <Col xs={9} md={4} className='text-left'>
+          <h1 className='outlined-text ml-4'>JunkedUp</h1>
         </Col>
-        <Col xs={2} md={6}>
+        <Col xs={3} md={8}>
           <img
             id='nav-icon'
             rel='img'
@@ -52,56 +52,56 @@ export default function Nav() {
             className='mobile-menu mobile-menu-hide hide-menu-collapse'
             onClick={showHideMobileMenu}
           >
-           <Link to='/' className='nav-item'>
+           <Link to='/' className='outlined-text'>
               <li>
-                <strong>home</strong>
+                home
               </li>
             </Link>
-            <Link to='/about' className='nav-item'>
+            <Link to='/about' className='outlined-text'>
               <li>
-                <strong>about</strong>
+                about
               </li>
             </Link>
-            <Link to='/search' className='nav-item'>
+            <Link to='/search' className='outlined-text'>
               <li>
-                <strong>search</strong>
+                search
               </li>
             </Link>
-            <Link to='/dash' className='nav-item'>
+            <Link to='/dash' className='outlined-text'>
               <li>
-                <strong>dash</strong>
+                dash
               </li>
             </Link>
-            <Link to='/auth' className='nav-item'>
+            <Link to='/auth' className='outlined-text'>
               <li>
-                <strong>login</strong>
+                login
               </li>
             </Link>
           </ul>
-          <ul id='desktop-menu' className='desktop-menu mt-3'>
-            <Link to='/' className='nav-item'>
+          <ul id='desktop-menu' className='desktop-menu mt-2'>
+            <Link to='/' className='outlined-text'>
               <li>
-                <strong>home</strong>
+                home
               </li>
             </Link>
-            <Link to='/about' className='nav-item'>
+            <Link to='/about' className='outlined-text'>
               <li>
-                <strong>about</strong>
+                about
               </li>
             </Link>
-            <Link to='/search' className='nav-item'>
+            <Link to='/search' className='outlined-text'>
               <li>
-                <strong>search</strong>
+                search
               </li>
             </Link>
-            <Link to='/dash' className='nav-item'>
+            <Link to='/dash' className='outlined-text'>
               <li>
-                <strong>dash</strong>
+                dash
               </li>
             </Link>
-            <Link to='/auth' className='nav-item'>
+            <Link to='/auth' className='outlined-text'>
               <li>
-                <strong>login</strong>
+                login
               </li>
             </Link>
           </ul>

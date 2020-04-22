@@ -5,18 +5,11 @@ nav {
   top: 0;
   background: $teal;
   z-index: 1;
-}
-
-.nav-text {
-  font-size: 1.7rem;
-  color: $white;
-  -webkit-text-stroke: 1px $space-gray;
-  text-align: center;
-  font-family: $header-font;
+  font-family: $header-font !important;
 }
 
 .icon {
-  transition: 0.5s;
+  transition: ease-in 0.5s;
 }
 
 .icon-rotate {
@@ -29,7 +22,7 @@ nav {
   top: 10vh;
   left: 0;
   background: $teal;
-  transition: 0.5s;
+  transition: ease-in-out 0.5s;
   overflow: hidden;
   text-align: center;
   @include flex-box(column, space-evenly, center);
@@ -39,18 +32,9 @@ nav {
   visibility: hidden;
 }
 
-.mobile-menu li {
-  width: 100%;
-  height: auto;
-}
-
-.mobile-menu a {
-  width: 100vw;
-  color: $white;
+.mobile-menu a,.desktop-menu a {
   text-transform: uppercase;
-  color: $white;
-  -webkit-text-stroke: 1px $space-gray;
-  font-size: 1.8rem;
+  font-size: 2em;
 }
 
 .mobile-menu a:hover {
@@ -70,16 +54,6 @@ nav {
 }
 
 @media (min-width: 768px) {
-  @media (max-width: 1000px) {
-    #desktop-menu {
-      width: 45vw;
-    }
-
-    #nav-item {
-      font-size: 0.9rem;
-    }
-  }
-
   .nav-static {
     height: 10vh;
     transition: 0.5s;
@@ -102,28 +76,13 @@ nav {
     display: none;
   }
 
-  .nav-text {
-    font-size: 2.2rem;
-  }
-
   .desktop-menu {
-    width: 40vw;
-    margin-right: 5vw;
+    margin-right: 10vw;
     @include flex-box(row, space-evenly, center);
   }
 
-  .nav-item {
-    color: $white;
-    -webkit-text-stroke: 1px $space-gray;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-  }
-
-  .nav-item:hover {
+  .desktop-menu a:hover {
     @include link-hover($space-gray);
   }
 
-  .logo-icon {
-    width: 5%;
-  }
 }

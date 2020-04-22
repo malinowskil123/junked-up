@@ -52,3 +52,8 @@ body {
     width: inherit;
   }
 }
+
+.outlined-text{
+  color: $white;
+  -webkit-text-stroke: 1px $space-gray;
+}

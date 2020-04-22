@@ -53,6 +53,7 @@ export default function HomeStatusBar(props) {
   }, [stockObj])
   return (
     <div>
+      <h3 className='text-center mt-4'>{graphValues.symbol}</h3>
       <Row>
         <Col className='text-center'>
           <Plot
@@ -66,7 +67,7 @@ export default function HomeStatusBar(props) {
                 marker: { color: '#5bc6b2' },
               },
             ]}
-            layout={{ autoSize: true, title: graphValues.symbol }}
+            layout={{ autoSize: true}}
             useResizeHandler={true}
           />
         </Col>

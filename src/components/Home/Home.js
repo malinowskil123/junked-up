@@ -57,7 +57,7 @@ function Home(props) {
         <Col>
           <Button
             id='market-index-btn'
-            className='buttons'
+            className='buttons mt-3 mt-md-2'
             size='lg'
             variant='outline-dark'
             onClick={() => {

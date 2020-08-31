@@ -1,6 +1,6 @@
 # Introduction
 
-**JunkedUp** simiplifies the process of keeping track of the news related to stocks that you follow. Now you won't miss any big company press release related to any of your stocks in your portfolio (node required!!!!). Work in progress.
+**JunkedUp**: simplifies the process of keeping track of the news related to stocks that you follow. Now you won't miss any big company press releases related to any of your stocks in your portfolio (node required!!!!). Work in progress.
 
 ## To Run This App </>
 

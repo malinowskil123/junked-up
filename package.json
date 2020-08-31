@@ -30,6 +30,7 @@
   },
   "scripts": {
     "start": "node server/index.js && react-scripts start",
+    "local-react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -50,5 +51,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:4420"
+  "main":"server/index.js"
 }

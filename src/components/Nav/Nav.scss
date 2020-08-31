@@ -109,6 +109,7 @@ nav {
   .desktop-menu {
     width: 40vw;
     margin-right: 5vw;
+    padding:0;
     @include flex-box(row, space-evenly, center);
   }
 

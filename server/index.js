@@ -1,8 +1,8 @@
 require('dotenv').config()
 const express = require('express'),
   app = express(),
-  { PORT } = process.env
+   PORT  = process.env.PORT || 9000
 
 app.use(express.static(`${__dirname}/../build`))
 
-app.listen(PORT || 4420, () => console.log(`Server Running On ${PORT || 4420}`))
+app.listen(PORT, () => console.log(`Server Running On ${PORT}`))
